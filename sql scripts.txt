@@ -15,6 +15,9 @@ CREATE TABLE [dbo].[AspNetUsers] (
     [LockoutEnabled]       BIT            NOT NULL,
     [AccessFailedCount]    INT            NOT NULL,
     [UserName]             NVARCHAR (256) NOT NULL,
+    [Adress]        	   NCHAR (50) 	  NOT NULL,
+    [City]        	   NCHAR (50) 	  NOT NULL,
+    [ZipCode]       	   NCHAR (15) 	  NOT NULL,		
     CONSTRAINT [PK_dbo.AspNetUsers] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
@@ -59,7 +62,7 @@ CREATE TABLE [dbo].[ProdCat]
 CREATE TABLE [dbo].[Orders]
 (
 	[OrderID] 	INT NOT NULL PRIMARY KEY IDENTITY, 
-	[UserID] 	INT NOT NULL,
+	[UserID] 	NVARCHAR (128) NOT NULL,
     	[OrderSent] 	BIT NOT NULL DEFAULT 0,
 	[OrderSentDate]	DATE NOT NULL,
     	[OrderDateTime]	DATETIME NOT NULL,
