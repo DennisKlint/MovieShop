@@ -21,7 +21,6 @@ CREATE TABLE [dbo].[AspNetUsers] (
     CONSTRAINT [PK_dbo.AspNetUsers] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
-
 GO
 CREATE UNIQUE NONCLUSTERED INDEX [UserNameIndex]
     ON [dbo].[AspNetUsers]([UserName] ASC);
@@ -42,10 +41,10 @@ CREATE TABLE [dbo].[Products]
 (
 	[ProductID] 	INT NOT NULL PRIMARY KEY IDENTITY, 
     	[ProductName] 	NCHAR(40) NOT NULL,
-	[Description] 	NCHAR(100) NOT NULL,
+	[MovieDescription]NCHAR(256) NOT NULL,
 	[Price] 	INT NOT NULL,
 	[NrInStore] 	INT NOT NULL DEFAULT 0,
-	[Rating] 	DECIMAL(2,2) NOT NULL,
+	[Rating] 	FLOAT NOT NULL,
 	[ProductTypeID] INT NOT NULL,
  	CONSTRAINT 	[FK_Products_ProductTypeID] FOREIGN KEY ([ProductTypeID]) REFERENCES [ProductType]([ProductTypeID]) ON DELETE CASCADE
 );
