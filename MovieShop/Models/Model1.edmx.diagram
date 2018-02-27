@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9fc54002799146eabc351ecee795e599" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.C__MigrationHistory" Width="1.5" PointX="0.5" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetRoles" Width="1.5" PointX="2.875" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUserClaims" Width="1.875" PointX="9.375" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUserLogins" Width="2.125" PointX="3" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUsers" Width="1.5" PointX="6.375" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Model.Categories" Width="1.5" PointX="14.875" PointY="6.875" />
+        <EntityTypeShape EntityType="Model.Orders" Width="1.5" PointX="5.5" PointY="6.125" />
+        <EntityTypeShape EntityType="Model.ProdCat" Width="1.5" PointX="12.5" PointY="6.5" />
+        <EntityTypeShape EntityType="Model.ProdOrder" Width="1.5" PointX="7.625" PointY="6.625" />
+        <EntityTypeShape EntityType="Model.Products" Width="1.5" PointX="10.125" PointY="6.625" />
+        <EntityTypeShape EntityType="Model.ProductType" Width="1.5" PointX="10.125" PointY="10.125" />
+        <AssociationConnector Association="Model.FK_Orders_UserID" />
+        <AssociationConnector Association="Model.FK_ProdCat_CategoryID" />
+        <AssociationConnector Association="Model.FK_ProdOrder_OrderID" />
+        <AssociationConnector Association="Model.FK_ProdCat_ProductID" />
+        <AssociationConnector Association="Model.FK_ProdOrder_ProductID" />
+        <AssociationConnector Association="Model.FK_Products_ProductTypeID" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
